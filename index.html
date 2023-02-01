@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openGallery()" >Gallery</button>
+    
+    <div id="popup" class="popup">
+        <h1>Image Gallery Design</h1>
+
+        <div class="gallery">
+            <a href="images/2.webp" data-lightbox="mygallery" data-title="This is Saree Imamage" > <img src="images/2.webp" alt=""></a>
+            <a href="images/3.webp" data-lightbox="mygallery">  <img src="images/3.webp" alt=""></a>
+            <a href="images/4.webp" data-lightbox="mygallery">  <img src="images/4.webp" alt=""></a>
+
+            <button onclick="closeGallery()">Close</button>
+        </div>
+
+        
+    </div>
+
+
+<script>
+    let popup = document.getElementById("popup");
+
+    function openGallery(){
+        popup.classList.add("open-popup");
+    }
+
+    function closeGallery(){
+        popup.classList.remove("open-popup");
+    }
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+<!-- 
+    Note: We are use lightBox first download lightbox in your browser
+    then we are copy the lightbox.min.css in dist foder and past your project css folder
+    then we are copy the lightbox-plus-jquery.min.js in dist folder and past your project js folder
+    then we are copy the image in images jolder and past your project images folder
+    
+    mygallery ka jagh aap koi v name da skta ha it's your choice
+    data-title ka andar ham log image pa title da skta ha
+
+-->
